@@ -1112,11 +1112,8 @@ Following activities are selected
 //
 // Q16 Implementation of Travelling Salesman Problem using dynamic programming.
 // #include <stdio.h>
-
-// // Declaration of variables
 // int a[10][10], visited[10], n, cost = 0;
 
-// // Function to find the next nearest city
 // int least(int c)
 // {
 //     int i, nc = 999;
@@ -1126,7 +1123,7 @@ Following activities are selected
 //         if ((a[c][i] != 0) && (visited[i] == 0))
 //             if (a[c][i] < min)
 //             {
-//                 min = a[c][i];
+//                 min = a[i][0] + a[c][i];
 //                 kmin = a[c][i];
 //                 nc = i;
 //             }
@@ -1135,8 +1132,6 @@ Following activities are selected
 //         cost += kmin;
 //     return nc;
 // }
-
-// // Function to take input from the user
 // void get()
 // {
 //     int i, j;
@@ -1158,8 +1153,6 @@ Following activities are selected
 //             printf("\t%d", a[i][j]);
 //     }
 // }
-
-// // Function to recursively find the minimum cost path
 // void mincost(int city)
 // {
 //     int i, ncity;
@@ -1175,15 +1168,11 @@ Following activities are selected
 //     }
 //     mincost(ncity);
 // }
-
-// // Function to print the minimum cost
 // void put()
 // {
 //     printf("\n\nMinimum cost:");
 //     printf("%d", cost);
 // }
-
-// // Main function to run the program
 // int main()
 // {
 //     get();
